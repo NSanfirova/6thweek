@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body {
+            font-size: 50px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .container {
+            display: grid;
+            width: 1600px;
+            height: 600px;
+            grid-template-columns: repeat(4, 1fr) 30%;
+            grid-template-rows: 100px 50% 25% 25% 100px;
+            grid-template-rows: [header-start] 20vh [header-end];
+            gap: 10px;
+        }
+
+        .header {
+            grid-row: header-start;
+            grid-column: 1/5;
+            background-color: #11e52d;
+            padding-top: 15px;
+        }
+
+        .sidebar {
+            grid-row: 2/5;
+            grid-column: 4/5;
+            background-color: #e31fa8;
+            padding-top: 20px;
+        }
+
+        .content-1 {
+            grid-row: 2/3;
+            grid-column: 1/4;
+            background-color: #4b0cd3;
+            padding-top: 20px;
+        }
+
+        .content-2 {
+            grid-row: 3/4;
+            grid-column: 1/4;
+            background-color: #67ee7b;
+            padding-top: 10px;
+        }
+
+        .content-3 {
+            grid-row: 4/5;
+            background-color: #6d0976;
+            padding-top: 10px;
+        }
+
+        .content-4 {
+            grid-row: 4/5;
+            background-color: #f3fb5b;
+            padding-top: 10px;
+        }
+
+        .footer1 {
+            grid-row: 5/6;
+            grid-column: 1/2;
+            background-color: #4b0cd3;
+            padding-top: 20px;
+        }
+
+        .footer2 {
+            grid-row: 5/6;
+            grid-column: 2/3;
+            background-color: #c11896;
+            padding-top: 20px;
+        }
+
+        .footer3 {
+            grid-row: 5/6;
+            grid-column: 3/4;
+            background-color: #4b0cd3;
+            padding-top: 20px;
+        }
+
+        .footer4 {
+            grid-row: 5/6;
+            grid-column: 4/5;
+            background-color: #0472ad;
+            padding-top: 20px;
+        }
+
+        .cont_3_4 {
+            display: grid;
+            grid-column: 1/4;
+            height: 90px;
+            margin-top: -15px;
+            margin-bottom: -15px;
+            column-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">Заголовок</header>
+        <aside class="sidebar">Боковая часть</aside>
+        <div class="content-1">Главная часть</div>
+        <div class="content-2">Еще 1</div>
+        <div class="cont_3_4">
+            <div class="content-3">Еще 2</div>
+            <div class="content-4">Еще 3</div>
+        </div>
+        <footer class="footer1">Футер 1</footer>
+        <footer class="footer2">Футер 2</footer>
+        <footer class="footer3">Футер 3</footer>
+        <footer class="footer4">Футер 4</footer>
+    </div>
+</body>
+</html>
